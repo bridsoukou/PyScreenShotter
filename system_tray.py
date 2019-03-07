@@ -19,7 +19,7 @@ class SysTrayUI:
         # *** Setup Menu ***
         self.menu_items = [
             MenuItem("Activate Listener", lambda: self.init_thread(target=self.init_screenshotter)),
-            MenuItem("?", lambda: self.init_thread(target=self.instructions)),
+            MenuItem("Help", lambda: self.init_thread(target=self.instructions)),
             MenuItem("Select Folder", lambda: self.init_thread(target=self.select_folder)),
             MenuItem("Open Folder", lambda: Popen("explorer %s" % os.path.normpath(self.screenshots_folder))),
             MenuItem("Exit", self.exit),
